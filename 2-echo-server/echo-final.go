@@ -36,10 +36,7 @@ func main() {
 func echo(conn net.Conn) {
 	defer conn.Close()
 
-	for {
-		if _, err := io.Copy(conn, conn); err != nil {
-			log.Printf("unable to copy data: %v", err)
-			break
-		}
+	if _, err := io.Copy(conn, conn); err != nil {
+		log.Fatalf("unable to copy data: %v", err)
 	}
 }
