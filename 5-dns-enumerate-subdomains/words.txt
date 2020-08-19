@@ -1,0 +1,7 @@
+test
+admin
+dev
+buy
+news
+ops
+good
