@@ -11,7 +11,7 @@ func main() {
 	fqdn := dns.Fqdn("66.ru")
 	fmt.Printf("FQDN %s\n", fqdn)
 	msg.SetQuestion(fqdn, dns.TypeA)
-	in, err := dns.Exchange(&msg, "8.8.8.8:53")
+	in, err := dns.Exchange(&msg, "127.0.0.1:53")
 	if err != nil {
 		panic((err))
 	}
