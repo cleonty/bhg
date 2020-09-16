@@ -19,6 +19,7 @@ func main() {
 	// In real implementations, we'd read the message and HMAC value from network source
 	message := []byte("The red eagle flies at 10:00")
 	mac, _ := hex.DecodeString("69d2c7b6fbbfcaeb72a3172f4662601d1f16acfb46339639ac8c10c8da64631d")
+	fmt.Printf("mac as string %s\n", string(mac))
 
 	if checkMAC(message, mac) {
 		fmt.Println("EQUAL")
